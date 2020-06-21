@@ -15,11 +15,11 @@ jobs:
         mkr --version
   go-get:
     runs-on: ubuntu-latest
-    env:
-      GO111MODULE: on
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-go@v2
+      with:
+        go-version: 1.14
     - run: |
         go get github.com/mackerelio/mkr
         go install github.com/mackerelio/mkr
