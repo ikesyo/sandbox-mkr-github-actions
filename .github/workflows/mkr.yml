@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: |
-        curl -fsSL https://mackerel.io/assets/files/scripts/setup-apt.sh | sh
+        curl -fsSL https://mackerel.io/file/script/setup-apt-v2.sh | sh
         sudo apt-get install mkr
         mkr --version
   go-get:
